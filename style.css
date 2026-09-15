@@ -1,0 +1,1256 @@
+/*  
+    --vinho: #860038;
+    --vinho-escuro: #5A0028;
+    --dourado: #FDBB30;
+    
+    --preto: #000000;
+    --preto-cards: #111111;
+    
+    --branco: #FFFFFF;
+    --cinza: #D9D9D9;
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+/* clique lento */
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 9.2rem;
+}
+
+/* body */
+body {
+    font-family: 'montserrat';
+    color: white;
+    overflow-x: hidden;  /* para a imagem nao passar da tela além do que precisa */
+}
+
+header {
+    width: 100%;
+    height: 9.2rem;
+
+    background-color: #0D0D0D;
+    border-bottom: 1px solid #3b2810;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+/* LOGO - nome da torcida*/
+.logo img {
+    margin-top: 15px;
+    margin-left: 30px;
+    vertical-align: middle;
+}
+
+.nome-torcida {
+    display: inline-block;
+    margin-left: 15px;
+    vertical-align: middle;
+}
+
+.nome-torcida h1 {
+    font-size: 3.1rem;
+    color: #AD8650;
+    font-family: 'anton';
+    font-weight: 100;
+    letter-spacing: .2rem;
+    line-height: .95;
+    margin-top: 15px;
+}
+
+.nome-torcida p {
+    font-size: 1.4rem;
+}
+
+/* NAVEGAÇÃO DO HEADER */
+.logo nav {
+    display: inline-block;
+    margin-left: 30rem;
+    vertical-align: middle;
+    margin-top: 15px;
+}
+
+.logo nav a {
+    display: inline-block;
+    position: relative;
+
+    color: white;
+    text-decoration: none;
+    font-size: 1.9rem;
+    font-weight: 700;
+
+    margin-left: 4rem;
+}
+
+/* BARRA DO MENU */
+.logo nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    width: 0;
+    height: 2px;
+    background-color: #AD8650;
+    transition: 0.3s;
+}
+
+.logo nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* REDES SOCIAIS */
+.redes_sociais {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20rem;
+}
+
+.redes_sociais img {
+    width: 25px;
+    margin-left: 2.5rem;
+}
+
+/* BOTAO "SEJA MEMBRO" */
+.seja_membro {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5rem;
+    margin-top: 15px;
+}
+
+.seja_membro a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 500;
+
+    padding: 12px 30px;
+
+    border: 2px solid #A68051;
+    border-radius: 30px;
+}
+
+/* MAIN */
+
+
+/* VIDEO INICAL */
+.hero {  /* container */
+    position: relative;
+    width: 100%;
+    height: 96rem;
+    overflow: hidden; /* controla o que acontece quando o conteúdo de um elemento passa dos limites dele */
+}
+
+/* config. do video */
+.hero video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* preenche todo o espaço sem deformar o vídeo. */
+}
+
+/* colocando uma SOMBRA encima do video */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+/* escrita do video */
+.conteudo {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: white;
+    font-size: 2.5rem;
+}
+
+.conteudo p:nth-of-type(1) {
+    color: #A68051;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 3;
+}
+
+.conteudo h2 {
+    font-weight: 500;
+    font-size: 12rem;
+    font-family: 'anton';
+    line-height: 0.6;
+}
+
+.conteudo h2 span {
+    color: #AD8650;
+}
+
+.conteudo p:nth-of-type(2) {
+    font-size: 2.1rem;
+    width: 40%;
+    margin-top: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.conteudo a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 15px 30px;
+    border-radius: 15px;
+}
+
+.conteudo a:nth-of-type(1) {
+    background-color: #5A0028;
+}
+
+.conteudo a:nth-of-type(2) {
+    border: 2px solid #A68051;
+    margin-left: 2rem;
+}
+
+/* SOBRE NÓS */
+/* imagem de funfo */
+.sobre {
+    width: 100%;
+    height:900px;
+    background-color: #17090D;
+    background-image:
+        linear-gradient(
+            to left,
+            #17090D 0%,
+            #17090D 25%,
+            rgba(23, 9, 13, 0.95) 38%,
+            rgba(23, 9, 13, 0.50) 52%,
+            rgba(23, 9, 13, 0) 72%
+        ),
+        url("imagens/geral/quadra_expandida.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+/* caixa posição */
+.conteudo-sobre {
+    width: 40%;
+    position: relative;
+    left: 113rem;
+    top: 10rem;
+}
+
+/* escrita/conteudo */
+.conteudo-sobre h2 {
+    font-family: 'Roboto Slab';
+
+    font-size: 6.5rem;
+    line-height: 1.1;
+    color: #FFFFFF;
+    margin-top: 25px;
+    line-height: .7;
+}
+
+.conteudo-sobre h2 span {
+    color: #FDBB30;
+    font-size: 6.5;
+}
+
+.conteudo-sobre p:nth-of-type(1) {
+    color: #FDBB30;
+    font-family: 'Anton';
+    font-size: 2.5rem;
+    letter-spacing: 0.4rem;
+}
+
+/* linha geral */
+.linha {
+    width: 75px;
+    height: 3px;
+
+    background-color: #FDBB30;
+
+    margin: 30px 0;
+}
+
+.conteudo-sobre p {
+    font-size: 2.1rem;
+    line-height: 1.6;
+    color: #E5E5E5;
+    max-width: 600px;  /* controla a largura do p */
+    margin-bottom: 20px;
+    margin-left: 15px;
+}
+
+.conteudo-sobre h3 {
+    font-family: 'Roboto Slab';
+    font-size: 1.8rem;
+    color: #FDBB30;
+    letter-spacing: 0.1rem;
+    margin-top: 30px;
+}
+
+/* ESTASTISTICA */
+.estatisticas {
+    width: 85%;
+    height: 150px;
+    margin: 15rem auto 0;  /* auto 0 = distribui o espaço de margem restante igualmente */
+    background: linear-gradient(
+    90deg,
+    #4A1025,
+    #65132F,
+    #4A1025);
+    border: 1px solid #A68051;
+    border-radius: 20px;
+    display: block;
+}
+
+/* posicionamento das logos */
+.estatistica {
+    display: inline-block;
+    width: 24%;
+    margin-top: 25px;
+    vertical-align: middle;
+}
+
+.estatistica img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 70px;
+}
+
+.estatistica div {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px;
+}
+
+/* config da escrita */
+.estatistica h3 {
+    font-family: 'Anton';
+    font-size: 3rem;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.estatistica p {
+    font-size: 1.3rem;
+    color: #FFFFFF;
+    line-height: 1.4;
+}
+
+/* linha vertical */
+.estatistica{
+    border-right: 1px solid #A68051;
+}
+
+/* tirar a linha do ultimo item */
+.estatistica:last-child {
+    border-right: none;
+}
+
+/*SESSÃO JOGOS (aqui já foi ensinado flex box) */
+/* fundo da sessão */
+.jogos {
+    width: 100%;
+    min-height: 900px;
+
+    padding: 80px 6%;
+
+    background-color: #17090D;
+
+    background-image: url("imagens/geral/jogadores.png");
+
+    background-size: 100% auto;  /* deixa a a imagem 100% da largura da seção, e a altura será proporcional à imagem */
+    background-repeat: no-repeat;
+    background-position: top center;
+
+    position: relative;
+}
+
+/* degrade do fundo */
+.jogos::after {
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            to right,
+            #17090D 0%,
+            rgba(23, 9, 13, 0.80) 30%,
+            rgba(23, 9, 13, 0.30) 60%,
+            rgba(23, 9, 13, 0) 100%
+        ),
+        linear-gradient(
+            to top,
+            #17090D 30%,
+            rgba(23, 9, 13, 0.90) 60%,
+            rgba(23, 9, 13, 0.45) 80%,
+            rgba(23, 9, 13, 0) 90%
+        );
+
+    pointer-events: none;
+}
+
+/* posição para nao sobrepor o conteúdo da sessão */
+.jogos > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* TITULO */
+/* descrição */
+.titulo-jogos p {
+    color: #FDBB30;
+    font-family: 'Anton';
+    font-size: 2.5rem;
+    letter-spacing: 0.4rem;
+}
+
+.titulo-jogos h2 {
+    font-family: 'Roboto Slab';
+
+    font-size: 6.5rem;
+    line-height: 1.1;
+    margin-top: 5rem;
+    line-height: .7;
+}
+
+.titulo-jogos h2 span {
+    color: #FDBB30;
+}
+
+.linha-jogos p:nth-of-type(1) {
+    font-size: 2.5rem;
+    font-family: 'Montserrat';
+    line-height: 1.6;
+    color: #E5E5E5;
+    max-width: 700px;  /* controla a largura do p */
+    margin-bottom: 5rem;
+    margin-left: 15px;
+    letter-spacing: 0rem;
+    
+}
+
+.jogo {
+    width: 100%;
+    min-height: 14.5rem;
+
+    margin-bottom: 1.5rem;
+    padding: 1.5rem 2rem;
+
+    background: rgba(59, 7, 24, 0.8);
+    backdrop-filter: blur(5px);
+
+    border: 1px solid #A68051;
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+}
+
+/* DATA JOGO estilo */
+.data-jogo {
+    width: 13rem;
+    text-align: center;
+    border-right: 1px solid rgba(166, 128, 81, 0.4);  /* linha lateral */
+    padding-right: 2rem;
+    flex-shrink: 0; /* controla quanto um elemento pode diminuir quando não existe espaço suficiente dentro do container. */
+}
+
+.data-jogo h3 {
+    font-size: 5.3rem;
+    font-family: 'Roboto Slab';
+}
+
+.data-jogo p {
+    font-family: 'Montserrat';
+    letter-spacing: 0rem;
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
+}
+
+/* times */
+.times {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    width: 40%;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+}
+
+/* alinhando a foto dos times */
+.time {
+    text-align: center;
+}
+
+.time p {
+    font-family: 'Roboto Slab';
+    margin-top:1rem;
+    color: white;
+    letter-spacing: 3px;
+    font-size: 2rem;
+}
+
+.times strong {
+    font-size: 2rem;
+    color: #FDBB30;
+}
+
+.informacoes-jogo {
+    height: 11rem;
+    padding-left: 2.5rem;
+    border-left: 1px solid rgba(166, 128, 81, 0.4);  /* linha lateral */
+    
+}
+
+.informacoes-jogo p:nth-of-type(1) {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-top: .5rem;
+}
+
+.informacoes-jogo p:nth-of-type(2) {
+    font-family: 'Montserrat';
+    color: white;
+    font-weight: 400;
+    letter-spacing: 0;
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+.botao-jogo {
+    margin-left: auto;
+    padding: 14px 30px;
+
+    border: 1px solid #FDBB30;
+    border-radius: 25px;
+
+    text-decoration: none;
+    color: white;
+    font-size: 1.8rem;
+}
+
+/* CONTEÚDO DOS JOGOS */
+.conteudo-jogos {
+    display: flex;
+    align-items: flex-start;
+    gap: 5rem;
+}
+
+.lista-jogos {
+    width: 75%;
+}
+
+/* CLASSIFICAÇÃO DOS JOGOS */
+.classificacao {
+    width: 25%;
+    padding: 2.5rem;
+    background-color: rgba(23, 9, 13, 0.85);
+    border: 1px solid #A68051;
+    border-radius: 15px;
+    margin-top: 17.23rem;
+}
+
+.titulo-classificacao {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.icone-trofeu {
+    width: 5rem;
+    height: 5rem;
+
+    border: 2px solid #FDBB30;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 2.5rem;
+}
+
+.titulo-classificacao h3 {
+    font-family: 'Anton';
+    font-size: 2.5rem;
+    font-weight: 400;
+
+    color: #FDBB30;
+}
+
+.linha-classificacao {
+    width: 100%;
+    height: 1px;
+
+    background-color: #A68051;
+
+    margin: 2rem 0;
+}
+
+.cabecalho-classificacao {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 1rem;
+
+    color: #FDBB30;
+
+    font-family: 'Montserrat';
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+
+.time-classificacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 1rem;
+    border-bottom: 1px solid rgba(166, 128, 81, 0.3);
+    font-family: 'Montserrat';
+    font-size: 2.5rem;
+}
+
+.time-classificacao.destaque {
+    background-color: #4A1025;
+    border-radius: 10px;
+    color: #FDBB30;
+}
+
+.botao-classificacao {
+    display: block;
+    margin-top: 2rem;
+    padding: 1.2rem;
+    text-align: center;
+    border: 1px solid #FDBB30;
+    border-radius: 12px;
+    color: #FDBB30;
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-size: 1.4rem;
+    font-weight: 700;
+    transition: 0.4s;
+}
+
+.botao-classificacao:hover {
+    background-color: #FDBB30;
+    color: #17090D;
+}
+
+/* ADQUIRIR INGRESSOS */
+.chamada-jogos {
+    width: 95%;
+
+    background-color: #4A1025;
+    border: 1px solid #A68051;
+    border-radius: 15px;
+
+    margin: 4rem auto 0;
+    padding: 3rem 4rem;
+
+    display: flex;
+    align-items: center;
+}
+
+.ticket {
+    padding-right: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chamada-jogos h3 {
+    font-family: 'Roboto Slab';
+    font-size: 3rem;
+    color: #FDBB30;
+    letter-spacing: 0.1rem;
+}
+
+.chamada-jogos p {
+    font-family: 'Montserrat';
+    font-size: 1.5rem;
+
+    color: white;
+}
+
+/* botão COMPRAR INGRESSOS */
+.chamada-jogos a {
+    margin-left: auto; /* alinha o cintainer a esquerda */
+    padding: 1.4rem 2.5rem;
+
+    background-color: #FDBB30;
+    border: 2px solid #FDBB30;
+    border-radius: 3rem;
+
+    color: #17090D;
+
+    text-decoration: none;
+
+    font-family: 'Montserrat';
+    font-size: 1.7rem;
+    font-weight: 700;
+    transition: 0.4s;
+}
+
+/* animação ao passar o mouse */
+.chamada-jogos a:hover {
+    background-color: transparent;
+
+    color: #FDBB30;
+}
+
+
+/* SESSÃO GALERIA */
+/* fundo */
+.galeria {
+    background-color: #0D0D0D;
+    padding: 8rem 5% 5rem;
+}
+/* CAIXA CABEÇALHO */
+.cabecalho-galeria {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-bottom: 3rem;  /* espaço antes da proxima "caixa" */
+    padding: 0 5% 5rem;
+}
+
+/* subtitulo galeria */
+.subtitulo-galeria {
+    color: #FDBB30;
+    font-family: 'Anton';
+    font-size: 2.5rem;
+    letter-spacing: 0.4rem;
+}
+
+.texto-galeria h2 {
+    font-family: 'Roboto Slab';
+
+    font-size: 6.5rem;
+    line-height: 1.1;
+    margin-top: 5rem;
+    line-height: .7;
+}
+
+.texto-galeria h2 span {
+    color: #FDBB30;
+}
+
+.linha-galeria {
+    width: 75px;
+    height: 3px;
+
+    background-color: #FDBB30;
+
+    margin: 30px 0;
+}
+
+/* config descrição da sessão */
+.descricao-galeria {
+    font-size: 2.5rem;
+    font-family: 'Montserrat';
+    line-height: 1.6;
+    color: #E5E5E5;
+    max-width: 700px;  /* controla a largura do p */
+    margin-bottom: 5rem;
+    margin-left: 15px;
+    letter-spacing: 0rem;
+    font-weight: 400;
+}
+
+/* FILTRAR IMAGEM */
+.filtros-galeria {
+    display: flex;
+
+    gap: 4rem;
+}
+
+.filtros-galeria a {
+    position: relative;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-family: 'Montserrat';
+    font-size: 1.7rem;
+    font-weight: 600;
+
+    padding-bottom: 1rem;
+}
+
+/* barra embaixo */
+.filtros-galeria a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    width: 0;
+    height: .3rem;
+
+    background-color: #FDBB30;
+
+    transition: .3s;
+}
+
+/* efeito */
+.filtros-galeria a:hover::after,
+.filtros-galeria a.ativo::after {
+
+    width: 100%;
+
+    left: 0;
+}
+
+.filtros-galeria a.ativo {
+    color: #FDBB30;
+}
+
+/* FOTO PRINCIPAL */
+.imagem-destaque {
+    width: 65%;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #64152A;
+}
+
+.imagem-destaque img {
+    width: 100%;
+    height: 45rem;
+    display: block;
+    object-fit: cover;
+}
+
+/* legenda sobre a imagem */
+.legenda-imagem {
+    position: absolute;
+    right: 3rem;
+    bottom: 2rem;
+}
+
+.legenda-imagem h3 {
+    font-family: 'Montserrat';
+    font-size: 1.8rem;
+    letter-spacing: .2rem;
+}
+
+.legenda-imagem p {
+    font-family: 'Montserrat';
+    font-size: 1.4rem;
+    color: #FDBB30;
+    margin-top: .5rem;
+}
+
+/* FOTOS */
+.grade-galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 27rem 27rem;
+    gap: 1rem;
+}
+
+/* todas as fotos */
+.foto {
+    overflow: hidden;
+    border: 1px solid #64152A;
+    position: relative;
+}
+
+/* imagem */
+.foto img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: .4s;
+}
+
+.foto-grande {
+    grid-row: span 2; /* linhas ocupando */
+}
+
+.foto:hover img {
+    transform: scale(1.05); /* expandir */
+}
+
+/* BOTÃO VER MAIS FOTOS */
+.botao-galeria {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.botao-galeria a {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.3rem 3rem;
+    border: 1px solid #FDBB30;
+    border-radius: 3rem;
+    color: #FDBB30;
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-size: 1.6rem;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.botao-galeria a span {
+    font-size: 2rem;
+}
+
+/* HOVER */
+.botao-galeria a:hover {
+    background-color: #FDBB30;
+    color: #17090D;
+}
+
+
+/* SESSÃO LOJA */
+.loja {
+    background: linear-gradient(
+    to bottom,
+    #080808 0%,
+    #10080B 25%,
+    #1D0A12 50%,
+    #350D1C 75%,
+    #4A1025 100%
+);  
+    width: 100%;
+}
+
+/* banner inicial */
+.banner img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* caixa cabeçalho */
+.cabecalho-loja {
+    text-align: center;
+    margin-top: 5rem;
+    width: 100%;
+}
+
+/* textos */
+.cabecalho-loja h2 {
+    font-size: 8rem;
+    color: #ffdd92;
+    font-family: 'Roboto Slab';
+}
+
+.cabecalho-loja p {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin: 4rem 30rem;
+    color: #E5E5E5;
+    font-weight: 400;
+}
+
+/* linha do titulo 1 */
+.linha1-loja {
+    width: 7rem;
+    height: 3px;
+    margin: 10px auto;
+
+    background-color: #FDBB30;
+
+    display: flex;
+    justify-content: center;
+}
+
+/* linha do titulo 2 */
+.linha2-loja {
+    width: 15rem;
+    height: 3px;
+    margin: 10px auto;
+
+    background-color: #FDBB30;
+
+    display: flex;
+    justify-content: center;
+}
+
+/* caixa das imagens */
+.imagens-detalhes {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 7rem 0;
+    gap: 5rem;
+}
+
+.item-detalhe {
+    position: relative;
+    overflow: hidden;
+}
+
+.item-detalhe img {
+    border: 2px solid #65132F;
+    display: block;
+}
+
+/* CAIXA DE TEXTO */
+.detalhe {
+    position: absolute;
+    inset: 0;
+
+    padding: 3rem;
+
+    box-sizing: border-box;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    border: 2px solid #65132F;
+
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+
+    z-index: 2;
+}
+
+.detalhe h3 {
+    font-size: 2.5rem;
+    color: #FDBB30;
+    font-family: 'Roboto Slab';
+    margin: 0;
+}
+
+.detalhe p {
+    font-size: 2.2rem;
+    margin-top: 2rem;
+    color: white;
+}
+
+.linha-baixo {
+    width: 15rem;
+    height: 3px;
+    background-color: #FDBB30;
+}
+
+/* HOVER */
+.item-detalhe:hover .detalhe {
+    transform: translateY(0);
+}
+
+
+/* DIV DA COMPRA */
+.vista {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.vista img {
+    border: 1px solid #65132F;    
+    display: block;
+    
+}
+
+/* CONTEÚDO SOBRE A IMAGEM */
+.conteudo-vista {
+    position: absolute;
+    top: 22%;
+    left: 15%;
+
+    width: 35%;
+}
+
+.conteudo-vista h2 {
+    font-family: 'Roboto Slab';
+    font-size: 7rem;
+    color: #fce2ab;
+    margin: 0;
+}
+
+.conteudo-vista h2 span {
+    color: #d4b062;
+    position: relative;
+    bottom: 50px;
+}
+
+.conteudo-vista p {
+    font-size: 2rem;
+    position: absolute;
+    bottom: -7rem;
+    line-height: 1.2;
+    margin-left: 1.5rem;
+}
+
+/* BOTÃO */
+.botao-comprar a {
+    padding: 1.3rem 3rem;
+    position: absolute;
+    top: 27.5rem;
+
+    border: 2px solid #d4b062;
+    border-radius: 3rem;
+
+    color: #d4b062;
+    text-decoration: none;
+
+    font-family: 'Montserrat';
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    transition: .3s;
+}
+
+.botao-comprar a:hover {
+    background-color: #d4b062;
+    color: #17090D;
+}
+
+/* SELOS */
+.selos {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #1f0710;
+    margin-top: 5rem;
+    padding: 2rem 0;
+    border: 1px solid #000000;
+    gap: 7rem;
+}
+
+.selo {
+    display: flex;
+    align-items: center;
+    border-right: 1px solid #FDBB30;
+    padding-right: 7rem;
+}
+
+.conteudo-selos {
+    display: block;
+    margin-left: 2rem;
+}
+
+/* remove a borda somente do último selo */
+.selo:last-child {
+    border-right: none;
+}
+
+.conteudo-selos h2 {
+    font-size: 1.6rem;
+    color: #FDBB30;
+}
+
+.conteudo-selos p {
+    font-size: 1.5rem;
+}
+
+
+/* RODAPÉ */
+footer {
+    background-color: #080808;
+    padding: 5rem 0;
+}
+
+.rodape1 {
+    display: flex;
+    align-items: center;
+    gap: 20rem;
+}
+
+footer img {
+    margin-left: 15rem;
+}
+
+.navegue {
+    margin-left: auto;
+}
+
+
+.navegue h1, .lojaa h1, .cavsnation h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #fce2ab;
+}
+
+.navegue a, .lojaa a, .cavsnation p{
+    display: block;
+    color: #E5E5E5;
+    text-decoration: none;
+    font-size: 1.8rem;
+    line-height: 1.7;
+
+    transition: .5s;
+}
+
+.navegue a:hover, .lojaa a:hover {
+    color: #FDBB30;
+}
+
+.cavsnation {
+    width: 20%;
+}
+
+.redes-footer {
+    display: flex;
+    gap: 4rem;
+    width: max-content
+}
+
+.redes-footer a {
+    display: flex;
+    width: auto;
+}
+
+.redes-footer img {
+    object-fit: contain;
+    margin: 1rem 0 0 0;
+}
+
+.copy {
+    height: .1rem;
+    margin-top: 4rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid #4A1025;
+    text-align: center;
+}
+
+.copy h2 {
+    font-family: 'Montserrat';
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #E5E5E5;
+}
