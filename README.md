@@ -34,8 +34,8 @@ Projeto desenvolvido para fins acadêmicos durante as aulas de Web Design - Fron
 
 ## Preview
 
-![Página inicial](imagens/home.png)
+![Página inicial](imagens/home.PNG)
 
-![Página do projeto](imagens/projeto1.png)
+![Página do projeto](imagens/projeto1.PNG)
 
-![Página do projeto](imagens/projeto2.png)
+![Página do projeto](imagens/projeto2.PNG)
